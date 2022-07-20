@@ -3,6 +3,7 @@
 using namespace std;
 
 int Power(int base, int exponent);
+int Cubed(int base);
 
 int main()
 {
@@ -14,7 +15,8 @@ int main()
     cin >> number;
 
     //  Return the number cubed
-    cout << "Your cubed value is : " << Power(number, 3) << endl;
+    cout << "Your cubed value is : " << /*Power(number, 3)*/ Cubed(number) << endl;
+
 }
 
 int Power(int base, int exponent)
@@ -24,4 +26,9 @@ int Power(int base, int exponent)
     }
 
     return base * Power(base, exponent - 1);
+}
+
+int Cubed(int base)
+{
+    return base * base * base;
 }
